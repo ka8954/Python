@@ -1,0 +1,35 @@
+class Student:
+    def __init__(self, n, a, r):
+        self.name = n
+        self.age = a
+        self.regn = r
+
+    def getval(self):
+        print("NAME :", self.name)
+        print("AGE : ", self.age)
+        print("REGISTRATION NUMBER : ", self.regn)
+
+
+names = []
+ages = []
+regnum = []
+
+objects = []
+
+n = int(input("Enter the Size of Record : "))
+
+for i in range(1, n+1):
+    print("\n")
+    x = input("Enter the name of the Student : ")
+    y = int(input("Enter the Age of the Student : "))
+    names.append(x)
+    ages.append(y)
+    regnum.append(i)
+
+for i in range(0,n):
+    objects.append(Student(names[i], ages[i], regnum[i]))
+print("\n")
+
+x = int(input("Enter the Registration number of the student to get the data : "))
+objects[x-1].getval()
+
